@@ -1,0 +1,66 @@
+/* Base Styles - Applied to all devices */
+.svg-container, .svg-container0, .svg-container1, .svg-container1B, .svg-container2, .svg-container3, .svg-container4, .svg-container5 {
+    display: none; /* Hide all containers by default */
+    max-width: 100%; /* Ensure SVGs are responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center elements horizontally */
+}
+
+/* Extra Small Devices (portrait phones, 0px to 412px) */
+@media only screen and (max-width: 412px) {
+    .svg-container0 {
+        display: block; /* Visible on extra small screens */
+    }
+    .hero_khwaish h1 {
+        font-size: 26px;
+        font-weight: 400;
+      }
+}
+
+/* Small Devices (landscape phones, 413px to 600px) */
+@media only screen and (min-width: 413px) and (max-width: 500px) {
+    .svg-container1 {
+        display: block; /* Visible on small screens */
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+    .svg-container1B {
+        display: block; /* Visible on small screens */
+    }
+}
+
+
+/* Medium Devices (small tablets, 601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .svg-container2 {
+        display: block; /* Visible on medium devices */
+    }
+}
+
+/* Medium-Large Devices (large tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .svg-container3 {
+        display: block; /* Visible on larger tablets */
+    }
+}
+
+/* Large Devices (small laptops, 993px to 1108px) */
+@media only screen and (min-width: 993px) and (max-width: 1108px) {
+    .svg-container4 {
+        display: block; /* Visible on small laptops */
+    }
+}
+
+/* Extra Large Devices (laptops/desktops, 1109px to 1200px) */
+@media only screen and (min-width: 1109px) and (max-width: 1200px) {
+    .svg-container5 {
+        display: block; /* Visible on larger laptops */
+    }
+}
+
+/* Extra Extra Large Devices (Desktops, 1201px and up) */
+@media only screen and (min-width: 1201px) {
+    .svg-container {
+        display: block; /* Visible on very large desktops */
+    }
+}
