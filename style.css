@@ -25,15 +25,7 @@ body {
   z-index: 3;
 }
 
-.logo-box {
-  margin-left: 2vh;
-  float: left;
-  margin: 25px;
-  font-family: 'Lean Foreword', sans-serif;
-  width: 80px;
-  
 
-}
 .logo-box h2 {
   font-size: 35px;
   color: #553f60;
