@@ -7,16 +7,18 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #ffffff;
+  background: #d6eeff;
 }
 
 .container {
   max-width: 100vw;
   margin: 0 auto;
+  position: absolute;
+  top: 65%;
 }
 
 #header {
-  background: white;
+  background: linear-gradient(45deg, #640672ba, #6b0b9b);
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: fixed;
   top: 0;
@@ -28,9 +30,16 @@ body {
 
 .logo-box h2 {
   font-size: 35px;
-  color: #553f60;
+  color: #ffffff;
 }
 
+.menu-container{
+  border-radius: 0.1%;
+  box-shadow: 0 25px 20px -28px rgba(0, 0, 0, 0.474);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+
+}
 nav ul {
   overflow: hidden;
   clear: both;
@@ -48,16 +57,16 @@ nav ul li a {
   display: block;
   font-size: 1.15;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 10px;
 }
 
 a.highlight {
     display: block;
-  font-size: 1.15;
+  font-size: 0.1vh;
   text-decoration: none;
-  color: black;
-  padding: 10px;
+  color: rgb(255, 255, 255);
+  padding: 5px;
 }
 
 /* menu icon */
@@ -74,7 +83,7 @@ a.highlight {
 }
 
 #header .menu-icon .nav-icon {
-  background: #333;
+  background: #ffffff;
   display: block;
   height: 3px;
   position: relative;
@@ -85,7 +94,7 @@ a.highlight {
 
 #header .menu-icon .nav-icon:before,
 #header .menu-icon .nav-icon:after {
-  background: #333;
+  background: #ffffff;
   content: '';
   display: block;
   height: 100%;
@@ -132,54 +141,31 @@ main {
   color: white;
   width: 100%;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 0;
 }
+
 
 .hero {
-  text-align: center;
-  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  left: 45%;
 }
-
-.hero-title-primary {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 10vmin;
-  line-height: 58px;
-}
-
-.hero-title-sub {
-  margin: 0.2em 0 1em 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 4.6vmin;
-}
-
 button {
-  margin-top: 20px;
-  margin-bottom: 50px;
   font-family: "Poppins", sans-serif;
-  background-color: #fff;
-  color: black;
+  background: linear-gradient(185deg, #640672ba,#8638ac, #6b0b9b);
+  color: rgb(250, 211, 255);
   border: none;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.656);
   border-radius: 5px;
-  padding: 15px 30px;
+  padding: 15px 10px;
   text-align: center;
   text-decoration: none;
-  font-size: 25px;
+  font-size:3vh;
 }
 
 button:hover {
-  background-color: black;
-  color: white;
-}
-
-figure {
-  text-align: center;
-}
-
-figure svg {
-  margin: 3em auto 0;
-  width: 80vw;
+  background-color: rgb(58, 3, 88);
+  color: rgb(255, 253, 133);
 }
 
 .waves {
@@ -538,7 +524,7 @@ input[type="email"] {
   }
   
   #header {
-    background: white;
+    background: linear-gradient(45deg, #640672ba, #6b0b9b);
   }
   
   #logo-box {
@@ -568,14 +554,15 @@ input[type="email"] {
   nav ul li a {
     font-size: 1em;
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     padding: 0;
+    margin: 0 0.001%;
   }
   
   a.highlight {
     font-size: 1em;
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     padding: 0.5em 1em;
   }
   
@@ -589,13 +576,13 @@ input[type="email"] {
   }
   
   .highlight {
-    border: 1px solid #333;
+    border: 1px solid #ffffff;
     border-radius: 50px;
   }
   
   .highlight:hover,.special:hover {
-    background: black;
-    color: white;
+    background: rgb(214, 214, 214);
+    color: rgb(204, 192, 192);
     border-bottom: none;
   }
   
