@@ -871,7 +871,7 @@
 @media (max-width: 768px) {
   .event-stats {
       flex-direction: column;
-      padding: 20px;
+      padding: 4px;
   }
 
   .stat-item {

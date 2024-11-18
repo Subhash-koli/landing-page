@@ -302,21 +302,21 @@ iframe {
   object-fit: cover;
 }
 
-.pricing-container {
+.Masonry_gallery {
   padding: 150px 38px 10px 38px;
   background: white;
   display: flex;
   flex-direction: column;
 }
 
-.pricing-title {
+.Masonry_gallery-title {
   margin-bottom: 50px;
   font-size: 23px;
   color: black;
   align-self: center;
 }
 
-.pricing-title > h2 {
+.Masonry_gallery-title > h2 {
   font-weight: 600;
 }
 
@@ -401,7 +401,7 @@ li.first-feat {
   font-weight: normal;
 }
 
-.pricing-button {
+.Masonry_gallery-button {
   background-color: white;
   border: 1px solid red;
   border-radius: 2em;
@@ -473,7 +473,7 @@ input[type="email"] {
     transform: none;
   }
 
-  .pricing-button {
+  .Masonry_gallery-button {
     padding: .75em 1.5em;
   }
 }
