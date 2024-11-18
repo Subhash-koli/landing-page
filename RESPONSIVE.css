@@ -15,6 +15,12 @@
         font-size: 26px;
         font-weight: 400;
       }
+      .hero {
+        justify-content: center;
+        align-items: center;
+        left: 30%;
+
+      }
 }
 
 /* Small Devices (landscape phones, 413px to 600px) */
@@ -26,11 +32,21 @@
         font-size: 30px;
         font-weight: 400;
       }
+      .hero {
+        justify-content: center;
+        align-items: center;
+        left: 35%;
+      }
 }
 @media only screen and (min-width: 501px) and (max-width: 600px) {
     .svg-container1B {
         display: block; /* Visible on small screens */
     }
+    .hero {
+        justify-content: center;
+        align-items: center;
+        left: 40%;
+      }
 }
 
 
