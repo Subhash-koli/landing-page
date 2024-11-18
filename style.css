@@ -184,8 +184,10 @@ button:hover {
   flex-direction: column;
   text-align: center;
   flex-wrap: wrap;
-  color: red;
-  background-color: white;
+  color: rgb(88, 0, 135);
+  background-color: rgb(240, 235, 255);
+  text-shadow: 2px #390051;
+
 }
 
 .video-title {
@@ -195,7 +197,7 @@ button:hover {
 
 .video-subtitle {
   margin-top: -10px;
-  color: #d3d3d3;
+  color: #db0000;
   margin-bottom: 20px;
 }
 

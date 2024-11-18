@@ -796,6 +796,8 @@
   transform: scale(1.1);
   color: #e74c3c;
 }
+
+
 /* Event Stats Section */
 .event-stats {
   display: flex;
@@ -805,6 +807,7 @@
   padding: 50px;
   background: #f7f9fc;
   animation: fadeInUp 1s ease-out;
+ 
 }
 
 .stat-item {
@@ -812,6 +815,7 @@
   margin: 20px;
   padding: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
 }
 
 .stat-item:hover {
@@ -822,7 +826,7 @@
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
-  color: #2d3436;
+  color: #4f0155;
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   -webkit-background-clip: text;
   background-clip: text;
@@ -831,7 +835,7 @@
 
 .stat-label {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 10px;
   color: #636e72;
 }
@@ -840,7 +844,7 @@
 @keyframes fadeInUp {
   0% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(50px);
   }
   100% {
       opacity: 1;
