@@ -19,7 +19,7 @@
         justify-content: center;
         align-items: center;
         left: 28%;
-        top: 70%;
+        top: 75%;
 
       }
 }
@@ -36,7 +36,8 @@
       .hero {
         justify-content: center;
         align-items: center;
-        left: 35%;
+        left: 30%;
+        top: 75%;
       }
 }
 @media only screen and (min-width: 501px) and (max-width: 600px) {
@@ -46,7 +47,8 @@
     .hero {
         justify-content: center;
         align-items: center;
-        left: 40%;
+        left: 32%;
+        top: 75%;
       }
 }
 
@@ -56,6 +58,12 @@
     .svg-container2 {
         display: block; /* Visible on medium devices */
     }
+    .hero {
+        justify-content: center;
+        align-items: center;
+        left: 38%;
+        top: 75%;
+      }
 }
 
 /* Medium-Large Devices (large tablets, 769px to 992px) */
