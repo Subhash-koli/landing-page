@@ -19,7 +19,7 @@
         justify-content: center;
         align-items: center;
         left: 30%;
-        top: 75%;
+        top: 80%;
 
       }
 }
@@ -37,7 +37,7 @@
         justify-content: center;
         align-items: center;
         left: 34%;
-        top: 80%;
+        top: 85%;
       }
 }
 @media only screen and (min-width: 501px) and (max-width: 600px) {
@@ -48,7 +48,7 @@
         justify-content: center;
         align-items: center;
         left: 36%;
-        top: 80%;
+        top: 85%;
       }
 }
 
@@ -62,7 +62,7 @@
         justify-content: center;
         align-items: center;
         left: 38%;
-        top: 80%;
+        top: 85%;
       }
 }
 
@@ -71,6 +71,12 @@
     .svg-container3 {
         display: block; /* Visible on larger tablets */
     }
+    .hero {
+        justify-content: center;
+        align-items: center;
+        left: 38%;
+        top: 85%;
+      }
 }
 
 /* Large Devices (small laptops, 993px to 1108px) */
@@ -78,6 +84,12 @@
     .svg-container4 {
         display: block; /* Visible on small laptops */
     }
+    .hero {
+        justify-content: center;
+        align-items: center;
+        left: 38%;
+        top: 85%;
+      }
 }
 
 /* Extra Large Devices (laptops/desktops, 1109px to 1200px) */
