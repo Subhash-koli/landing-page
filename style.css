@@ -265,7 +265,9 @@ iframe {
   margin-right: 60px;
   font-size: 2.125rem;
   font-weight: 700;
-  color: red;
+  color: rgb(88, 0, 135);
+  text-shadow: 2px #390051;
+
 }
 
 .inner-content-para {
@@ -320,97 +322,6 @@ iframe {
   font-weight: 600;
 }
 
-.flex-container {
-  max-width: 80vw;
-  margin: 0 auto;
-  display: flex;
-  padding: 1em;
-}
-
-.flex-item {
-  flex: 1;
-  width: 250px;
-  border: 1px solid rgba(0,0,0,.05);
-  border-radius: 8px;
-}
-
-.flex-item:not(:last-child) {
-  margin-right: 2em;
-}
-
-.package {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  transition: 0.25s;
-  display: flex;
-  flex-direction: column;
-}
-
-.package:hover {
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-  transform: scale(1.025);
-}
-
-.package .header {
-  color: black;
-  border-bottom: 5px red solid;
-  font-size: 1.6em;
-  font-weight: 600;
-}
-
-.package li {
-  color: rgba(55, 53, 47, 0.6);
-  background-color: #fff;
-  padding: 1.2em;
-}
-
-li.features:before {
-  content: '✓';
-  padding-right: 5px;
-}
-
-li.features {
-  text-align: left;
-  padding: 10px;
-}
-
-li.first-feat {
-  margin-top: 30px;
-}
-
-.package .gray {
-  background-color: #f7f7f7;
-  color: black;
-  font-weight: 600;
-  font-size: 40px;
-  padding: .8em;
-  line-height: 80%;
-}
-
-.dolla {
-  top: -.2em;
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: initial;
-}
-
-.month {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.Masonry_gallery-button {
-  background-color: white;
-  border: 1px solid red;
-  border-radius: 2em;
-  color: red;
-  cursor: pointer;
-  padding: .75em 1.5em;
-  font-size: 1em;
-}
-
 .subscribe-container {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -458,21 +369,6 @@ input[type="email"] {
 
 
 @media only screen and (max-width: 984px) {
-  .flex-container {
-    flex-wrap: wrap;
-  }
-
-  .flex-item {
-    flex: 0 0 100%;
-    margin-bottom: 1em;
-    width: 100%;
-  }
-
-  .package:hover {
-    box-shadow: none;
-    transform: none;
-  }
-
   .Masonry_gallery-button {
     padding: .75em 1.5em;
   }
@@ -676,9 +572,9 @@ input[type="email"] {
   margin-right: 60px;
   font-size: 2.125rem;
   font-weight: 700;
-  color: red;
+  color: rgb(88, 0, 135);
+  text-shadow: 2px #390051;
 }
-
 .inner-content-para {
   margin-top: 25px;
   margin-right: 60px;
@@ -841,5 +737,80 @@ p {
 
 .social-icon:hover {
   transform: translateY(-5px);
+}
+.khwaish-footer {
+  background: linear-gradient(to right, #980dadc7, #4401559d);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.khwaish-footer .footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.khwaish-footer .footer-left,
+.khwaish-footer .footer-middle,
+.khwaish-footer .footer-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.khwaish-footer .footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.khwaish-footer .footer-middle ul,
+.khwaish-footer .footer-right ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.khwaish-footer .footer-middle ul li,
+.khwaish-footer .footer-right ul li {
+  margin: 10px 0;
+}
+
+.khwaish-footer .footer-middle ul li a,
+.khwaish-footer .footer-right ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.khwaish-footer .footer-middle ul li a:hover,
+.khwaish-footer .footer-right ul li a:hover {
+  color: #ffcc00;
+}
+
+.khwaish-footer .footer-social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.khwaish-footer .footer-social ul {
+  display: flex;
+  gap: 20px;
+}
+
+.khwaish-footer .footer-social img {
+  width: 20px;
+  height: 20px;
+}
+
+.khwaish-footer .footer-bottom {
+  background: linear-gradient(#9309a595, #5c006895) ;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.khwaish-footer .footer-bottom p {
+  margin: 0;
+  font-size: 14px;
 }
 
