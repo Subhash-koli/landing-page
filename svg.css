@@ -649,118 +649,249 @@
             }
           }
 
-
-
-    /* Font */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-html {
-  background-color: #ecf9ff;
+          /* Highlight Stats Section */
+.highlight-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 40px;
+    background-color: #f5f6fa;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-section {
-  color: #272727;
-  font-family: 'Quicksand', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-}
-
-.main_section{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-    font-size: 24px;
-    font-weight: 400;
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 250px;
     text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+.stat-card h2 {
+    font-size: 1.8rem;
+    color: #2f3640;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-.btn {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+.highlight-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6347;  /* Vibrant Highlight Color */
+    letter-spacing: 1px;
 }
 
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
-.cards {
+/* Styling for specific cards */
+.event-participants {
+    background-color: #fffae5; /* Light yellow */
+}
+
+.total-stalls {
+    background-color: #e0f7fa; /* Light cyan */
+}
+
+.events {
+    background-color: #f1c40f; /* Light gold */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .highlight-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+.statistics {
   display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards_item {
-  display: flex;
-  padding: 1rem;
-}
-
-@media (min-width: 40rem) {
-  .cards_item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 56rem) {
-  .cards_item {
-    width: 33.3333%;
-  }
-}
-
-.card {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card_content {
-  padding: 1rem;
-  background: linear-gradient(to bottom left, #448ee4 40%, #00008b 100%);
-}
-
-.card_title {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0px;
-}
-
-.card_text {
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;    
-  font-weight: 400;
-}
-.made_by{
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 35px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+  background: #f0f4f8;
   text-align: center;
+  flex-wrap: wrap;
+  height: 100vh;
 }
+
+.stat-box {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stat-box .stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.5s ease-out, color 0.3s ease;
+}
+
+.stat-box .stat-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #7f8fa6;
+}
+
+.event-participants {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.total-stalls {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+
+.events {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+/* Animation to reveal the statistics */
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.stat-box:nth-child(1) {
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.stat-box:nth-child(2) {
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.stat-box:nth-child(3) {
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+.stat-box:hover .stat-number {
+  transform: scale(1.1);
+  color: #e74c3c;
+}
+/* Event Stats Section */
+.event-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  background: #f7f9fc;
+  animation: fadeInUp 1s ease-out;
+}
+
+.stat-item {
+  text-align: center;
+  margin: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2d3436;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: highlight 2s ease-in-out infinite alternate;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #636e72;
+}
+
+/* Animation Effects */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes highlight {
+  0% {
+      transform: scale(1);
+      opacity: 0.9;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0.9;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-stats {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .stat-item {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .stat-number {
+      font-size: 2.5rem;
+  }
+
+  .stat-label {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-number {
+      font-size: 2rem;
+  }
+  .stat-label {
+      font-size: 0.9rem;
+  }
+}
+
   
   
