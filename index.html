@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="svg.css">
-  <link rel="stylesheet" href="RESPONSIVE.css">
-  <link href="https://fonts.cdnfonts.com/css/lean-foreword" rel="stylesheet">      <!-- Include jQuery and Lightbox Plugin -->
+  <link rel="stylesheet" href="RESPONSIVE.css">     
+  
+  <!-- Include jQuery and Lightbox Plugin -->
   <!-- jQuery Library -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Magnific Popup CSS -->
@@ -6271,6 +6272,23 @@
   
 
 
+  <section class="khwaish-newsletter">
+    <h3>Subscribe now</h3>
+    <p>Join the Khwaish Fest community and be the first to receive exciting updates, event details, exclusive offers, and more. Stay connected with us!</p>
+    <form id="newsletter-form" action="#" method="post">
+      <div class="email-input-wrapper">
+        <input type="email" class="email-input" placeholder="Email Address" id="email" required />
+        <i class="email-icon fas fa-envelope"></i> <!-- FontAwesome Envelope Icon -->
+      </div>
+      <button type="submit" class="subscribe-btn">Subscribe</button>
+    </form>
+    <div id="error-message" class="error-message"></div>
+  </section>
+  
+  <!-- Add FontAwesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+ 
   <section class="gallery">
     <h2>Our Guests</h2>
     <div class="gallery-grid">
@@ -6289,87 +6307,109 @@
       <a href="image/image13.jpg" class="gallery-item"><img src="image/image13.jpg" alt="Guest 13"></a>
     </div>
   </section>
-  <section class="khwaish-newsletter">
-    <h3>Subscribe now</h3>
-    <p>Join the Khwaish Fest community and be the first to receive exciting updates, event details, exclusive offers, and more. Stay connected with us!</p>
-    <form id="newsletter-form" action="#" method="post">
-      <div class="email-input-wrapper">
-        <input type="email" class="email-input" placeholder="Email Address" id="email" required />
-        <i class="email-icon fas fa-envelope"></i> <!-- FontAwesome Envelope Icon -->
-      </div>
-      <button type="submit" class="subscribe-btn">Subscribe</button>
-    </form>
-    <div id="error-message" class="error-message"></div>
-  </section>
-  
-  <!-- Add FontAwesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
-
-  <footer class="khwaish-footer">
+  <footer class="footer">
     <div class="footer-container">
-      <div class="footer-left">
-        <img src="khwaish-logo.png" alt="Khwaish Logo" class="footer-logo">
-        <p>powai india</p>
+      <!-- Logo and About Us Section -->
+      <div class="footer-column">
+        <div class="footer-logo">
+          <img src="path-to-your-logo.png" alt="Khwaish Inter College Logo" class="logo-image">
+        </div>
+        <p class="footer-description">
+          Khwaish Inter College is dedicated to fostering educational excellence and student engagement through inspiring events.
+          <a href="about-us.html" class="footer-link">Learn more about us</a>.
+        </p>
       </div>
-      
-      <div class="footer-middle">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#faqs">FAQ’s</a></li>
-          <li><a href="#event-calendar">Event Calendar</a></li>
+  
+      <!-- Quick Links Section -->
+      <div class="footer-column">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Event Schedule</a></li>
+          <li><a href="speakers.html">Speakers/Guests</a></li>
+          <li><a href="register.html">Register/Tickets</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sponsors.html">Sponsors/Partners</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
   
-      <div class="footer-right">
-        <h3>Help Text</h3>
-        <ul>
-          <li><a href="#privacy-policy">Privacy Policy</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#sitemap">Site Map</a></li>
-        </ul>
+      <!-- Contact Information Section -->
+      <div class="footer-column">
+        <h3 class="footer-title">Contact Information</h3>
+        <p class="footer-contact">
+          Phone: <a href="tel:+1234567890" class="footer-link">+123 456 7890</a><br>
+          Email: <a href="mailto:info@khwaishintercollege.com" class="footer-link">info@khwaishintercollege.com</a><br>
+          Address: 1234 College Road, City, State
+        </p>
+        <div class="footer-map">
+          <!-- Optional: Embed a small Google Map if needed -->
+        </div>
       </div>
   
-      <div class="footer-social">
-        <h3>Social Share</h3>
-        <ul>
-             <div class="social-icons" style="right: 100px;">
-                    <a href="https://www.instagram.com" target="_blank" class="social-icon instagram"></a>
-                    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook"></a>
-                    <a href="https://www.youtube.com" target="_blank" class="social-icon youtube"></a>
-                </div>
-        </ul>
+      <!-- Social Media and Newsletter Section -->
+      <div class="footer-column">
+        <h3 class="footer-title">Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <img src="facebook-icon.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <img src="instagram-icon.png" alt="Instagram">
+          </a>
+          <a href="https://www.youtube.com" target="_blank" class="social-icon">
+            <img src="youtube-icon.png" alt="YouTube">
+          </a>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+          <button type="submit" class="newsletter-button">Subscribe</button>
+        </form>
       </div>
     </div>
   
+    <!-- Footer Bottom Bar -->
     <div class="footer-bottom">
-      <p>© Copyright 2024, Khwaish Fest. Powered by Chandrabhan sharma college</p>
+      <p>© 2024 Khwaish Inter College Event. All Rights Reserved.</p>
+      <div class="legal-links">
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
     </div>
+  
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
   </footer>
+
   
     
  <script>
-  $(document).ready(function() {
-    // Initialize Magnific Popup with animation effects
-    $('.gallery-item').magnificPopup({
-      type: 'image',
-      gallery: {
-        enabled: true
-      },
-      mainClass: 'mfp-fade',
-      removalDelay: 300, // Smooth transition
-      zoom: {
-        enabled: true,
-        duration: 300 // Zoom animation
-      }
-    });
-  
-    // Smooth scroll effect for mobile when scrolling over images
-    $('.gallery-item img').on('touchstart', function(e) {
-      $(this).css('scroll-snap-type', 'y mandatory');
-    });
+ $(document).ready(function() {
+  // Initialize Magnific Popup with animation effects
+  $('.gallery-item').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled: true
+    },
+    mainClass: 'mfp-fade',
+    removalDelay: 300, // Smooth transition
+    zoom: {
+      enabled: true,
+      duration: 300 // Zoom animation
+    }
   });
-   </script>
+
+  // Smooth scroll effect for mobile when scrolling over images
+  $('.gallery-item img').on('touchstart', function(e) {
+    $(this).css('scroll-snap-type', 'y mandatory');
+  });
+});
+
+// scroll to top //
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+  </script>
 </body>
 </html>

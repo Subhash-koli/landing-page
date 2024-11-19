@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Include jQuery and Lightbox Plugin -->
+<!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+<!-- Magnific Popup JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
+    <title>Document</title>
+    <style>
+/* General Gallery Styling */
+.gallery {
+  text-align: center;
+  padding: 0.5em;
+  background-color: #fafafa;
+}
+
+.gallery h2 {
+  font-size: 2.8em;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 1.5em;
+}
+
+/* Grid Styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+  filter: brightness(0.8);
+}
+
+/* Overlay Effect */
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.gallery-item:hover::before {
+  opacity: 1;
+}
+
+/* Responsive Styling for Mobile - 2 Columns */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Magnific Popup Styling */
+.mfp-bg {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Footer General Styling */
+.footer {
+  background: linear-gradient(45deg, #640672ba, #6b0b9b);
+  color: #f3f3f3;
+  padding: 50px 20px;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-description {
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.footer-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #d1d1d1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Contact Info */
+.footer-contact a {
+  color: #d1d1d1;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-icon img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover img {
+  transform: translateY(-5px);
+  opacity: 0.8;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.newsletter-input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  width: 70%;
+}
+
+.newsletter-button {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: #6b0b9b;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  font-size: 0.8em;
+}
+
+.legal-links a {
+  color: #d1d1d1;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.legal-links a:hover {
+  color: #ffffff;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffffff;
+  color: #6b0b9b;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+}
+/* Container for the festival */
+.khwaish-fest {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+    </style>
+</head>
+<body>
+ 
+  <section class="gallery">
+    <h2>Our Guests</h2>
+    <div class="gallery-grid">
+      <a href="image/image1.jpg" class="gallery-item"><img src="image/image1.jpg" alt="Guest 1"></a>
+      <a href="image/image2.jpg" class="gallery-item"><img src="image/image2.jpg" alt="Guest 2"></a>
+      <a href="image/image3.jpg" class="gallery-item"><img src="image/image3.jpg" alt="Guest 3"></a>
+      <a href="image/image4.jpg" class="gallery-item"><img src="image/image4.jpg" alt="Guest 4"></a>
+      <a href="image/image5.jpg" class="gallery-item"><img src="image/image5.jpg" alt="Guest 5"></a>
+      <a href="image/image6.jpg" class="gallery-item"><img src="image/image6.jpg" alt="Guest 6"></a>
+      <a href="image/image7.jpg" class="gallery-item"><img src="image/image7.jpg" alt="Guest 7"></a>
+      <a href="image/image8.jpg" class="gallery-item"><img src="image/image8.jpg" alt="Guest 8"></a>
+      <a href="image/image9.jpg" class="gallery-item"><img src="image/image9.jpg" alt="Guest 9"></a>
+      <a href="image/image10.jpg" class="gallery-item"><img src="image/image10.jpg" alt="Guest 10"></a>
+      <a href="image/image11.jpg" class="gallery-item"><img src="image/image11.jpg" alt="Guest 11"></a>
+      <a href="image/image12.jpg" class="gallery-item"><img src="image/image12.jpg" alt="Guest 12"></a>
+      <a href="image/image13.jpg" class="gallery-item"><img src="image/image13.jpg" alt="Guest 13"></a>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo and About Us Section -->
+      <div class="footer-column">
+        <div class="footer-logo">
+          <img src="path-to-your-logo.png" alt="Khwaish Inter College Logo" class="logo-image">
+        </div>
+        <p class="footer-description">
+          Khwaish Inter College is dedicated to fostering educational excellence and student engagement through inspiring events.
+          <a href="about-us.html" class="footer-link">Learn more about us</a>.
+        </p>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="footer-column">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Event Schedule</a></li>
+          <li><a href="speakers.html">Speakers/Guests</a></li>
+          <li><a href="register.html">Register/Tickets</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sponsors.html">Sponsors/Partners</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Information Section -->
+      <div class="footer-column">
+        <h3 class="footer-title">Contact Information</h3>
+        <p class="footer-contact">
+          Phone: <a href="tel:+1234567890" class="footer-link">+123 456 7890</a><br>
+          Email: <a href="mailto:info@khwaishintercollege.com" class="footer-link">info@khwaishintercollege.com</a><br>
+          Address: 1234 College Road, City, State
+        </p>
+        <div class="footer-map">
+          <!-- Optional: Embed a small Google Map if needed -->
+        </div>
+      </div>
+  
+      <!-- Social Media and Newsletter Section -->
+      <div class="footer-column">
+        <h3 class="footer-title">Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <img src="facebook-icon.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <img src="instagram-icon.png" alt="Instagram">
+          </a>
+          <a href="https://www.youtube.com" target="_blank" class="social-icon">
+            <img src="youtube-icon.png" alt="YouTube">
+          </a>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+          <button type="submit" class="newsletter-button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2024 Khwaish Inter College Event. All Rights Reserved.</p>
+      <div class="legal-links">
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+  </footer>
+  
+ <script>
+$(document).ready(function() {
+  // Initialize Magnific Popup with animation effects
+  $('.gallery-item').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled: true
+    },
+    mainClass: 'mfp-fade',
+    removalDelay: 300, // Smooth transition
+    zoom: {
+      enabled: true,
+      duration: 300 // Zoom animation
+    }
+  });
+
+  // Smooth scroll effect for mobile when scrolling over images
+  $('.gallery-item img').on('touchstart', function(e) {
+    $(this).css('scroll-snap-type', 'y mandatory');
+  });
+});
+
+// scroll to top //
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+ </script>
+</body>
+</html>
