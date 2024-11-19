@@ -19,7 +19,7 @@
         justify-content: center;
         align-items: center;
         left: 30%;
-        top: 80%;
+        top: 75%;
 
       }
 }
@@ -37,7 +37,7 @@
         justify-content: center;
         align-items: center;
         left: 34%;
-        top: 85%;
+        top: 65%;
       }
 }
 @media only screen and (min-width: 501px) and (max-width: 600px) {
@@ -48,7 +48,7 @@
         justify-content: center;
         align-items: center;
         left: 36%;
-        top: 85%;
+        top: 75%;
       }
 }
 
@@ -62,7 +62,7 @@
         justify-content: center;
         align-items: center;
         left: 38%;
-        top: 85%;
+        top: 65%;
       }
 }
 
@@ -75,7 +75,7 @@
         justify-content: center;
         align-items: center;
         left: 38%;
-        top: 85%;
+        top: 75%;
       }
 }
 
