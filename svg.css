@@ -15,7 +15,7 @@
 .hero_khwaish {
   font-family: "Lean Foreword", sans-serif;
   position: absolute;
-  top: 30%;
+  top: 50%;
   text-align: center;
   letter-spacing: 0.1em;
   transform: translate(-50%, -50%);
@@ -653,240 +653,7 @@
   }
 }
 
-/* Highlight Stats Section */
-.highlight-stats {
-  display: flex;
-  justify-content: space-around;
-  gap: 30px;
-  padding: 40px;
-  background-color: #f5f6fa;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.stat-card {
-  background-color: #b3aac4;
-  border-radius: 15px;
-  padding: 30px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: "Arial", sans-serif;
-}
-
-.stat-card h2 {
-  font-size: 1.8rem;
-  color: #2f3640;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.highlight-number {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ff6347; /* Vibrant Highlight Color */
-  letter-spacing: 1px;
-}
-
-.stat-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .highlight-stats {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stat-card {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-}
-.statistics {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
-  padding: 50px;
-  background: #e3dae7;
-  text-align: center;
-  flex-wrap: wrap;
-  height: 100vh;
-}
-
-.stat-box {
-  background-color: #ffffff;
-  padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.stat-box .stat-number {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  font-family: "Arial", sans-serif;
-  transition: transform 0.5s ease-out, color 0.3s ease;
-}
-
-.stat-box .stat-label {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #7f8fa6;
-}
-/* Styling for specific cards */
-.event-participants {
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-}
-
-.total-stalls {
-  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
-}
-
-.events {
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
-}
-
-/* Animation to reveal the statistics */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.stat-box:nth-child(1) {
-  animation: slideIn 1s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-.stat-box:nth-child(2) {
-  animation: slideIn 1s ease-out forwards;
-  animation-delay: 0.5s;
-}
-
-.stat-box:nth-child(3) {
-  animation: slideIn 1s ease-out forwards;
-  animation-delay: 0.7s;
-}
-
-.stat-box:hover .stat-number {
-  transform: scale(1.1);
-  color: #e74c3c;
-}
-
-/* Event Stats Section */
-.event-stats {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 50px;
-  background: #f7f9fc;
-  animation: fadeInUp 1s ease-out;
-}
-
-.stat-item {
-  text-align: center;
-  margin: 20px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  justify-content: center;
-}
-
-.stat-item:hover {
-  background-color: rgba(255, 235, 255, 0.379);
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.stat-number {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #4f0155;
-  background: linear-gradient(45deg, #ff7e5f, #feb47b);
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: highlight 2s ease-in-out infinite alternate;
-}
-
-.stat-label {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-top: 10px;
-  color: #636e72;
-}
-
-/* Animation Effects */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes highlight {
-  0% {
-    transform: scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.9;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .event-stats {
-    flex-direction: column;
-    padding: 60px;
-  }
-
-  .stat-item {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-  }
-
-  .stat-label {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .stat-number {
-    font-size: 2rem;
-  }
-  .stat-label {
-    font-size: 0.9rem;
-  }
-}
-
+/* CTA */
 .khwaish-newsletter {
   background-color: #f9f9f9;
   padding: 50px 20px;
@@ -992,5 +759,144 @@
 
   .khwaish-newsletter .subscribe-btn {
     width: 80%;
+  }
+}
+
+/* Stats Section Styling */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(45deg, rgb(251, 254, 255), #f7faff);
+  padding: 40px 0;
+  color: white;
+  font-weight: bold;
+  animation: backgroundScroll 10s linear infinite; /* Continuous background animation */
+}
+
+/* Background animation */
+@keyframes backgroundScroll {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Each Stat Item */
+.stat-item {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  display: block;
+  color: #400662;
+  animation: fadeIn 1s ease, bounce 2s infinite; /* Infinite bounce effect */
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #a59fad;
+  opacity: 0.9;
+}
+
+.stat-item:hover {
+  transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+  }
+}
+
+/* Ensure the section takes up full width */
+.brand-section {
+  top: 15%;
+  right: 30%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  padding: 10px 0 30px 0;
+  overflow: hidden;
+  background: none;
+  height: 400px; /* Set a fixed height for the section */
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Position and style the content */
+.brand-content {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: rise 1.5s ease-out forwards; /* Apply animation to make it rise */
+}
+
+/* Animation to make the content rise from the bottom */
+@keyframes rise {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+}
+
+/* Styling for text */
+.college-name {
+  text-transform: uppercase;
+
+}
+.college-name,
+.brand-name {
+  font-family: "Poppins", sans-serif; /* Use a festival-friendly font */
+  font-weight: bold;
+  font-size: 2em; /* Adjust font size as necessary */
+  color: #fefaff; /* Dark grey for contrast */
+  display: block;
+  margin: 0 0 5px;
+  opacity: 0.7;
+}
+
+/* Styling for the "presents" and event name */
+.brand-name {
+  color: #ff6347; /* Accent color for 'presents' */
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  /* Adjust text size for mobile responsiveness */
+  .college-name,
+  .brand-name {
+    font-size: 1em;
   }
 }

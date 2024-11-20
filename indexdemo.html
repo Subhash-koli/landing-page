@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Include AOS (Animate on Scroll) and CountUp.js Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.min.js"></script>
+    <style>
+
+      /* Stats Section Styling */
+      .stats-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(45deg, #ff6f91, #ff9671);
+        padding: 40px 0;
+        color: white;
+        font-weight: bold;
+        animation: backgroundScroll 10s linear infinite; /* Continuous background animation */
+      }
+
+      /* Background animation */
+      @keyframes backgroundScroll {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 100% 100%;
+        }
+      }
+
+      /* Each Stat Item */
+      .stat-item {
+        font-size: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .stat-number {
+        font-size: 3.5rem;
+        display: block;
+        color: #f9e795;
+        animation: fadeIn 1s ease, bounce 2s infinite; /* Infinite bounce effect */
+      }
+
+      .stat-label {
+        font-size: 1rem;
+        color: #ffffff;
+        opacity: 0.9;
+      }
+
+      .stat-item:hover {
+        transform: scale(1.1);
+      }
+
+      /* Keyframes for animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .stats-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="stats-section" class="stats-container">
+      <div class="stat-item" data-aos="fade-up">
+        <span class="stat-number" data-target="1000">0+</span>
+        <div class="stat-label">Event Participants</div>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+        <span class="stat-number" data-target="50">0+</span>
+        <div class="stat-label">Total Stalls</div>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+        <span class="stat-number" data-target="25">0+</span>
+        <div class="stat-label">Events</div>
+      </div>
+    </section>
+
+    <!-- Initialize AOS (Animate On Scroll) Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Run animations only once
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to handle the count-up animation
+        const animateCountUp = (element, target) => {
+          let start = 0;
+          const speed = 50; // Animation speed
+          const increment = target / speed;
+
+          const count = () => {
+            start += increment;
+            if (start > target) {
+              element.innerText = target + "+"; // Add the + sign
+            } else {
+              element.innerText = Math.ceil(start) + "+"; // Add the + sign during animation
+              requestAnimationFrame(count);
+            }
+          };
+
+          count();
+        };
+
+        // Scroll-triggered animation using Intersection Observer
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const targetElement = entry.target;
+                const targetValue = parseInt(
+                  targetElement.getAttribute("data-target")
+                );
+                animateCountUp(targetElement, targetValue);
+                observer.unobserve(targetElement); // Stop observing once animated
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        // Observe each stat number
+        const statNumbers = document.querySelectorAll(".stat-number");
+        statNumbers.forEach((number) => observer.observe(number));
+      });
+    </script>
+  </body>
+</html>
